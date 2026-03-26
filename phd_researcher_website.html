@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jai Kishan Rajak | PhD Researcher</title>
+  <meta name="description" content="Academic website of Jai Kishan Rajak, PhD researcher in Chemical Engineering at NTNU, working on water treatment, functional nanomaterials, PFAS removal, battery metal recovery, and environmental remediation." />
+  <style>
+    :root {
+      --bg: #090d12;
+      --bg-soft: #101722;
+      --panel: rgba(16, 23, 34, 0.82);
+      --panel-2: rgba(19, 28, 41, 0.92);
+      --text: #eef4fb;
+      --muted: #9aacbf;
+      --line: rgba(255,255,255,0.08);
+      --accent: #8fb3c9;
+      --accent-2: #6f8aa3;
+      --accent-soft: rgba(143, 179, 201, 0.12);
+      --accent-3: #b8c8a6;
+      --bg-deep: #06090e;
+      --warm: #d8c7a1;
+      --radius: 24px;
+      --shadow: 0 28px 70px rgba(0,0,0,0.34);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(143,179,201,0.10), transparent 26%),
+        radial-gradient(circle at 85% 12%, rgba(111,138,163,0.10), transparent 20%),
+        linear-gradient(180deg, #090d12 0%, #0c1118 55%, #0a0f15 100%);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.92rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 11, 17, 0.76);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible { color: var(--text); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.95rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+
+    .button.primary {
+      color: #081018;
+      background: linear-gradient(135deg, #c9d8e2, #8fa8bb);
+    }
+
+    .button.secondary {
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      border-color: var(--line);
+    }
+
+    section { padding: 5rem 0; }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero { padding: 6rem 0 4rem; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .hero-main { padding: 2.3rem; }
+
+    .hero-main h1 {
+      margin: 1rem 0 1rem;
+      font-size: clamp(2.8rem, 5vw, 5.2rem);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+      max-width: 10.8ch;
+      text-wrap: balance;
+    }
+
+    .hero-main h1 span {
+      background: linear-gradient(135deg, var(--accent), #d7e1ea);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 66ch;
+    }
+
+    .hero-actions {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .hero-stats {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.85rem;
+    }
+
+    .stat {
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-side {
+      padding: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(143,179,201,0.14), transparent 20%),
+        radial-gradient(circle at 80% 30%, rgba(111,138,163,0.14), transparent 18%),
+        linear-gradient(180deg, #0d1420, #0a1018 55%, #081018 100%);
+      min-height: 360px;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .hero-visual::before,
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto;
+      border-radius: 999px;
+      filter: blur(18px);
+      opacity: 0.45;
+      z-index: 0;
+      animation: floatGlow 8s ease-in-out infinite;
+    }
+
+    .hero-visual::before {
+      width: 160px;
+      height: 160px;
+      background: rgba(143,179,201,0.18);
+      top: 12%;
+      right: 8%;
+    }
+
+    .hero-visual::after {
+      width: 140px;
+      height: 140px;
+      background: rgba(111,138,163,0.16);
+      bottom: 10%;
+      left: 10%;
+      animation-delay: -4s;
+    }
+
+    .network {
+      position: relative;
+      width: min(92%, 380px);
+      aspect-ratio: 1;
+      z-index: 1;
+      animation: rotateNetwork 36s linear infinite;
+    }
+
+    .ring {
+      position: absolute;
+      inset: 12%;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50%;
+    }
+
+    .ring.r2 { inset: 25%; opacity: 0.9; }
+    .ring.r3 { inset: 37%; opacity: 0.8; }
+
+    .node {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 6px rgba(143,179,201,0.08), 0 0 18px rgba(143,179,201,0.28);
+      animation: pulseNode 3.6s ease-in-out infinite;
+    }
+
+    .node.core {
+      width: 18px;
+      height: 18px;
+      left: calc(50% - 9px);
+      top: calc(50% - 9px);
+      background: linear-gradient(135deg, var(--accent-3), var(--accent));
+      box-shadow: 0 0 0 10px rgba(184,200,166,0.08), 0 0 24px rgba(184,200,166,0.24);
+    }
+
+    .n1 { left: 14%; top: 28%; }
+    .n2 { left: 27%; top: 12%; animation-delay: -0.8s; }
+    .n3 { right: 18%; top: 18%; animation-delay: -1.2s; }
+    .n4 { right: 12%; top: 42%; animation-delay: -2.2s; }
+    .n5 { right: 24%; bottom: 16%; animation-delay: -1.6s; }
+    .n6 { left: 26%; bottom: 14%; animation-delay: -2.8s; }
+    .n7 { left: 11%; top: 52%; animation-delay: -1.9s; }
+    .n8 { left: 48%; top: 8%; animation-delay: -2.6s; }
+    .n9 { left: 48%; bottom: 7%; animation-delay: -0.4s; }
+
+    .bond {
+      position: absolute;
+      height: 1px;
+      transform-origin: left center;
+      background: linear-gradient(90deg, rgba(143,179,201,0.55), rgba(111,138,163,0.22));
+      opacity: 0.9;
+    }
+
+    .b1 { left: 18%; top: 31%; width: 34%; transform: rotate(-18deg); }
+    .b2 { left: 31%; top: 16%; width: 24%; transform: rotate(20deg); }
+    .b3 { left: 51%; top: 18%; width: 27%; transform: rotate(22deg); }
+    .b4 { left: 57%; top: 33%; width: 24%; transform: rotate(67deg); }
+    .b5 { left: 58%; top: 63%; width: 18%; transform: rotate(128deg); }
+    .b6 { left: 34%; top: 71%; width: 24%; transform: rotate(-6deg); }
+    .b7 { left: 16%; top: 55%; width: 26%; transform: rotate(-44deg); }
+    .b8 { left: 33%; top: 40%; width: 19%; transform: rotate(38deg); }
+    .b9 { left: 45%; top: 49%; width: 21%; transform: rotate(-28deg); }
+
+    .hero-caption {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(7, 12, 18, 0.62);
+      backdrop-filter: blur(10px);
+      z-index: 2;
+    }
+
+    .hero-caption strong {
+      display: block;
+      font-size: 0.96rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-caption span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @keyframes rotateNetwork {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulseNode {
+      0%, 100% { transform: scale(1); opacity: 0.95; }
+      50% { transform: scale(1.24); opacity: 1; }
+    }
+
+    @keyframes floatGlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    
+
+    .profile-meta {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .profile-meta h2 {
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .profile-meta p { color: var(--muted); }
+
+    .quick-links {
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .quick-links a {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 0.95rem 1rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.02);
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .quick-links a:hover {
+      border-color: rgba(143,179,201,0.35);
+      color: var(--text);
+    }
+
+    .section-heading {
+      margin-bottom: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .section-heading h2 {
+      margin-top: 0.6rem;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .grid-2, .grid-3, .grid-4 {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+    .content-card {
+      padding: 1.4rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      box-shadow: var(--shadow);
+    }
+
+    .content-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 0.55rem;
+      letter-spacing: -0.02em;
+    }
+
+    .content-card p,
+    .content-card li {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .content-card ul {
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .chip-row {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      padding: 0.42rem 0.7rem;
+      font-size: 0.82rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(143,179,201,0.18);
+      color: #dce7ef;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 1.4rem 1.4rem 1.4rem 1.7rem;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .timeline-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-top strong { font-size: 1.04rem; }
+    .timeline-top span, .timeline-item p, .timeline-item li { color: var(--muted); }
+
+    .timeline-item ul {
+      margin-top: 0.75rem;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .publication {
+      padding: 1.2rem 1.3rem;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.025);
+    }
+
+    .publication h3 {
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+      line-height: 1.45;
+    }
+
+    .publication p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.2rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.2rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-list strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-list span,
+    .contact-list a { color: var(--muted); }
+
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    label {
+      display: grid;
+      gap: 0.5rem;
+      font-size: 0.94rem;
+      font-weight: 500;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 0.95rem 1rem;
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgba(143,179,201,0.45);
+      background: rgba(255,255,255,0.045);
+    }
+
+    textarea { min-height: 170px; resize: vertical; }
+
+    .footer {
+      padding: 2.2rem 0 3rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1050px) {
+      .hero-grid,
+      .highlight-grid,
+      .contact-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        padding: 0.9rem 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .hero { padding-top: 4.5rem; }
+      .hero-main, .hero-side, .content-card, .timeline-item { padding: 1.2rem; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 300px; }
+      section { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="brand">JKR</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#awards">Awards</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="card hero-main">
+          <span class="tag">PhD in Chemical Engineering • NTNU • Water Treatment • Functional Nanomaterials</span>
+          <h1>Building <span>sustainable water and environmental solutions</span> through advanced materials, process insight, and translational research.</h1>
+          <p class="lead">
+            I am Jai Kishan Rajak, a PhD researcher in Chemical Engineering at the Norwegian University of Science and Technology (NTNU), Trondheim. My work sits at the intersection of water treatment, adsorption science, nanomaterials, contaminant transport, and environmental process development. I focus on translating rigorous laboratory research into robust, scalable, and climate-relevant solutions for pollutant removal, battery metal recovery, and CO₂ capture.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Contact me</a>
+            <a class="button secondary" href="#publications">View publications</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><strong>PhD</strong><span>Chemical Engineering at NTNU, defense pending</span></div>
+            <div class="stat"><strong>10+</strong><span>Research articles, papers, and manuscript highlights</span></div>
+            <div class="stat"><strong>3</strong><span>International research environments: Norway, Netherlands, India</span></div>
+            <div class="stat"><strong>Cross-sector</strong><span>Academic, industrial, and applied research experience</span></div>
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <div class="hero-visual" aria-hidden="true">
+            <div class="network">
+              <div class="ring"></div>
+              <div class="ring r2"></div>
+              <div class="ring r3"></div>
+              <span class="bond b1"></span>
+              <span class="bond b2"></span>
+              <span class="bond b3"></span>
+              <span class="bond b4"></span>
+              <span class="bond b5"></span>
+              <span class="bond b6"></span>
+              <span class="bond b7"></span>
+              <span class="bond b8"></span>
+              <span class="bond b9"></span>
+              <span class="node core"></span>
+              <span class="node n1"></span>
+              <span class="node n2"></span>
+              <span class="node n3"></span>
+              <span class="node n4"></span>
+              <span class="node n5"></span>
+              <span class="node n6"></span>
+              <span class="node n7"></span>
+              <span class="node n8"></span>
+              <span class="node n9"></span>
+            </div>
+            <div class="hero-caption">
+              <strong>Graphene and silica-inspired material network</strong>
+              <span>Animated hero visual reflecting adsorption, porous structure design, and interfacial engineering.</span>
+            </div>
+          </div>
+          <div class="profile-meta">
+            <h2>Jai Kishan Rajak</h2>
+            <p>PhD Researcher in Chemical Engineering<br />Norwegian University of Science and Technology (NTNU), Trondheim</p>
+            <p>Research focus: PFAS removal, water treatment, adsorbent materials, battery metal recovery, reactive transport, CO₂ capture using silica-based aerogel systems, environmental remediation, and process-oriented material development.</p>
+          </div>
+          <div class="quick-links">
+            <a href="mailto:jai.k.rajak@ntnu.no">jai.k.rajak@ntnu.no</a>
+            <a href="https://www.linkedin.com/in/jai-kishan-rajak-899a28217/" target="_blank" rel="noopener">LinkedIn Profile</a>
+            <a href="https://www.researchgate.net/profile/Jai-Rajak" target="_blank" rel="noopener">ResearchGate Profile</a>
+            <a href="tel:+4746253117">+47 46253117</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">About</span>
+            <h2>Researcher profile</h2>
+          </div>
+          <p>
+            I combine environmental engineering, adsorption science, field-based environmental understanding, and advanced materials development to address difficult water and separation problems with practical relevance.
+          </p>
+        </div>
+
+        <div class="highlight-grid">
+          <div class="content-card" style="padding: 0; overflow: hidden; min-height: 100%;">
+            <div style="height: 100%; min-height: 420px; background: linear-gradient(180deg, #121821, #0f141b); display: flex; align-items: stretch;">
+              <img src="pic1.jpg" alt="Portrait of Jai Kishan Rajak" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<div style=\'display:grid;place-items:center;width:100%;color:#9aacbf;padding:2rem;\'>Portrait image unavailable in preview</div>';" />
+            </div>
+          </div>
+          <div>
+            <div class="content-card" style="margin-bottom: 1.2rem;">
+            <h3>Professional Summary</h3>
+            <p>
+              I am in the final phase of my PhD in Chemical Engineering at NTNU, following an integrated BS–MS degree in Environmental Geosciences from IISER Kolkata. Across my research journey, I have developed expertise in water quality assessment, contaminant removal, adsorption systems, porous materials, and process analysis. My work includes the design of polymer-functionalized aerogels and mesoporous silica, the development of nanosorbents for metal and PFAS removal, contaminant transport studies in porous systems, and process-level thinking for environmental and industrial implementation. A central thread in my work is the use of silica-based porous materials, including silica aerogels, for both separation and capture challenges spanning water purification and CO₂ adsorption.
+            </p>
+          </div>
+          <div class="content-card">
+            <h3>What I Bring</h3>
+            <ul>
+              <li>Strong publication-oriented research profile in water treatment and functional materials</li>
+              <li>Hands-on experience across academia, applied research institutes, and industrial R&amp;D settings</li>
+              <li>Ability to connect experimental results, characterization data, and process performance</li>
+              <li>Comfort working across multidisciplinary teams in Norway, India, and the Netherlands</li>
+              <li>Structured, self-driven, and motivated by sustainable technology development</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Research</span>
+            <h2>Core research themes</h2>
+          </div>
+          <p>
+            My research is centered on designing high-performance material systems and understanding transport, adsorption, and separation behavior in environmentally important water and gas systems.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="content-card">
+            <h3>Water Treatment and Emerging Contaminants</h3>
+            <p>
+              Development of advanced adsorbent systems for the removal of PFAS, metal ions, and other persistent contaminants from challenging water matrices. This includes studies on robustness, cyclic stability, long-term performance, and analytical quantification using modern instrumentation.
+            </p>
+            <div class="chip-row">
+              <span class="chip">PFAS removal</span>
+              <span class="chip">Battery metal recovery</span>
+              <span class="chip">Water quality</span>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h3>Nanomaterials, Sorbents, and Surface Functionalization</h3>
+            <p>
+              Design and evaluation of mesoporous silica particles, silica aerogels, graphene-derived systems, biochar composites, hydroxyapatite-based materials, and polymer-functionalized interfaces for adsorption, remediation, and separation applications. This includes silica-based porous architectures tailored for both PFAS removal and CO₂ capture.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Mesoporous silica</span>
+              <span class="chip">Silica aerogels</span>
+              <span class="chip">Graphene systems</span>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h3>Transport, Process Insight, and Scale-Up Thinking</h3>
+            <p>
+              From fixed-bed breakthrough studies and tracer experiments to reactive transport and process evaluation, I focus not only on material performance but also on the system-level behavior required for real implementation in water and environmental engineering contexts.
+            </p>
+            <div class="chip-row">
+              <span class="chip">Reactive transport</span>
+              <span class="chip">Column studies</span>
+              <span class="chip">Process evaluation</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Experience</span>
+            <h2>Academic, international, and industrial journey</h2>
+          </div>
+          <p>
+            My path combines doctoral research, international exchange, industrial internship experience, and early-stage environmental field and laboratory research.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <strong>PhD Researcher — NTNU, Trondheim, Norway</strong>
+              <span>2021 – Present</span>
+            </div>
+            <p>
+              PhD in Chemical Engineering with research spanning water treatment, advanced sorbent systems, adsorption-driven separation, and environmentally critical treatment processes. Thesis and publication work has included CO₂ adsorption on polyethyleneimine-functionalized silica and silica-aerogel-based systems, battery metal recovery using advanced mesoporous silica nanoparticles, and applied treatment strategies for complex contaminants.
+            </p>
+            <ul>
+              <li>Designed and evaluated material-based treatment systems with attention to adsorption behavior, regeneration, and long-term robustness.</li>
+              <li>Conducted monitoring and analysis related to water quality and contaminant transport.</li>
+              <li>Prepared technical reports, manuscripts, and research documentation supporting process interpretation and optimization.</li>
+              <li>Supervised bachelor’s and master’s students in separation technology-related academic work.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <strong>Exchange Researcher — IIT Madras, India</strong>
+              <span>Jun 2025 – Sep 2025</span>
+            </div>
+            <p>
+              Developed polymer-functionalized silica aerogels for PFAS adsorption and quantification using LC-MS/MS while coordinating data workflows between NTNU and IIT Madras teams.
+            </p>
+            <ul>
+              <li>Integrated material synthesis, adsorption testing, and analytical chemistry workflows.</li>
+              <li>Built analysis pipelines in Python and JMP for interpreting experimental results.</li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <strong>R&amp;D Intern — Cealtech AS, Stavanger, Norway</strong>
+              <span>Jan 2024 – Apr 2024</span>
+            </div>
+            <p>
+              Conducted R&amp;D on CVD-based graphene oxide sorbents and contributed to laboratory-scale optimization, process evaluation, documentation, and safe research practice in an industrial setting.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <strong>Guest Researcher — IHE Delft Institute for Water Education, Netherlands</strong>
+              <span>Jul 2022 – Sep 2022</span>
+            </div>
+            <p>
+              Planned and carried out tracer experiments for contaminant transport in water systems and used inverse modelling approaches to understand system behavior and environmental impact.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-top">
+              <strong>Integrated BS–MS Researcher — IISER Kolkata, India</strong>
+              <span>2015 – 2020</span>
+            </div>
+            <p>
+              Built a strong foundation in environmental geosciences, geochemistry, field sampling, and engineered sorbents for the remediation of chromate, selenate, arsenate, dyes, and other contaminants. Also contributed to field sampling for microplastics and contaminated soils and groundwater.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Publications</span>
+            <h2>Selected publications and manuscript highlights</h2>
+          </div>
+          <p>
+            My publication portfolio spans peer-reviewed journal articles, conference papers, and manuscripts under review across adsorption, contaminant remediation, reactive transport, and advanced materials for water treatment.
+          </p>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <h3>Evaluation of the CO₂ adsorption capacity of polyethyleneimine-functionalized silica nanoparticles using adsorption isotherms</h3>
+            <p>Manuscript draft focused on adsorption performance and process-relevant understanding of amine-functionalized silica systems for carbon capture, complementing broader work on silica-aerogel-based adsorption platforms.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Advanced mesoporous silica nanoparticles for efficient recovery of battery metal ions in complex water matrices</h3>
+            <p>Under review. Research on selective and efficient recovery of metal ions from complex aqueous systems using tailored mesoporous materials.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Polyethyleneimine functionalized silica aerogels for PFAS removal: understanding adsorption performance with mechanistic insights</h3>
+            <p>Under review. Mechanistic and performance-driven study connecting surface chemistry, porous structure, and removal behavior for persistent fluorinated contaminants.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Physicochemical mapping of DTAB-templated mesoporous silica: how solvent viscosity and interfacial tension shape growth trajectories</h3>
+            <p>Under review. Materials-focused work exploring synthesis control and growth behavior in templated mesoporous structures.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Reactive transport and sorption behavior of pollutants in presence of redox-sensitive nano Fe⁰ impregnated graphene: advancing towards continuous water filtration</h3>
+            <p>Article highlighting reactive transport, redox-sensitive composites, and continuous treatment performance in filtration settings.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Continuous filtration of multimetal-contaminated river water and groundwater using antioxidants preserved redox-sensitive nanocomposites</h3>
+            <p>Published in ACS ES&amp;T Water, connecting multimetal removal performance with nanocomposite reactivity and self-sedimentation potential.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Removal of chromate ions from leachate-contaminated groundwater samples using chitin modified iron-enriched hydroxyapatite nanocomposite</h3>
+            <p>Peer-reviewed article on eco-friendly nanocomposite systems for Cr(VI) remediation in environmentally contaminated groundwater.</p>
+          </article>
+
+          <article class="publication">
+            <h3>Treatment of chromite ore processing residue leachate contaminated water with modified nano-calcium hydroxy phosphate mineral surfaces</h3>
+            <p>Conference and article-based work on remediation of hazardous chromium-bearing leachate using engineered mineral surfaces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Awards & Recognition</span>
+            <h2>Funding, grants, and academic recognition</h2>
+          </div>
+          <p>
+            My work has been recognized through competitive fellowships, innovation grants, scientific travel support, and industry-linked research opportunities.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="content-card">
+            <h3>Digital Life Norway Industry Internship</h3>
+            <p>
+              Selected for the Digital Life Norway industry internship program, a competitive opportunity that supported a three-month industrial research placement with salary and travel support.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Scientific and Travel Funding</h3>
+            <p>
+              Recipient of support listed in my academic CV for scientific work in chemistry and chemical technology and for international scientific representation through NTNU-related travel funding.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Innovation and Early Research Awards</h3>
+            <p>
+              Top-5 finalist in the Vikram Sarabhai Innovation Competition, recipient of an independent research grant at the MS level, Best Thesis Presentation recognition, and first-place poster presentation distinction at IISER Kolkata.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Scholarships and Fellowships</h3>
+            <p>
+              Awarded the IISER Kolkata BS–MS fellowship and the DST-INSPIRE scholarship from the Department of Science and Technology, Government of India.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Academic Merit</h3>
+            <p>
+              Qualified the National Talent Search Examination and secured a strong national rank in IIT-JEE Advanced, reflecting a long-standing record of academic performance.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>International Research Visibility</h3>
+            <p>
+              Built a research trajectory with conference participation, international mobility, and peer-reviewed scholarly output aligned with environmental technology and advanced materials.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Skills</span>
+            <h2>Methods, tools, and technical expertise</h2>
+          </div>
+          <p>
+            I bring a broad technical toolkit that spans laboratory experimentation, material characterization, contaminant analysis, transport modeling, and scientific computation.
+          </p>
+        </div>
+
+        <div class="grid-4">
+          <article class="content-card">
+            <h3>Analytical Methods</h3>
+            <ul>
+              <li>ICP-MS / ICP-OES</li>
+              <li>LC-MS/MS</li>
+              <li>UV–Vis spectroscopy</li>
+              <li>Water quality analysis</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Characterization</h3>
+            <ul>
+              <li>BET, FTIR, Raman, XRD</li>
+              <li>STEM, AFM, SEM</li>
+              <li>TGA, DSC, GC</li>
+              <li>Zeta sizer, tensiometry</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Process & Modelling</h3>
+            <ul>
+              <li>Mass balances and process evaluation</li>
+              <li>HYDRUS and PHREEQC</li>
+              <li>Breakthrough and regeneration studies</li>
+              <li>Reactive transport and inverse modelling</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h3>Computational Toolkit</h3>
+            <ul>
+              <li>Python, MATLAB, JMP</li>
+              <li>Origin, HSC, ArcGIS</li>
+              <li>Data interpretation and workflow design</li>
+              <li>Scientific writing and reporting</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-2" style="margin-top: 1.2rem;">
+          <article class="content-card">
+            <h3>Field & Experimental Experience</h3>
+            <p>
+              In-situ water sampling, assessment of metal-contaminated soils, air quality and aerosol monitoring, geological field investigations, fixed-bed adsorption columns, permeable reactive barriers, tracer experiments, and contaminant transport studies.
+            </p>
+          </article>
+          <article class="content-card">
+            <h3>Academic Service & Broader Engagement</h3>
+            <p>
+              Volunteer at INTERPORE 2023 in Edinburgh, organizing team member for Pint of Science Trondheim, LEAP Program volunteer, fieldwork coordinator, and active participant in mentoring and academic community-building activities.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="tag">Contact</span>
+            <h2>Open to research, collaboration, and industry conversations</h2>
+          </div>
+          <p>
+            I welcome opportunities in research collaboration, postdoctoral projects, environmental technology development, industrial R&amp;D, scientific consulting, and interdisciplinary innovation.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="content-card" style="margin-bottom: 1.2rem;">
+            <h3>Contact Details</h3>
+            <p>Feel free to reach out for collaboration, speaking opportunities, technical discussions, or professional opportunities.</p>
+            <ul class="contact-list">
+              <li>
+                <strong>Email</strong>
+                <a href="mailto:jai.k.rajak@ntnu.no">jai.k.rajak@ntnu.no</a>
+              </li>
+              <li>
+                <strong>Phone</strong>
+                <a href="tel:+4746253117">+47 46253117</a>
+              </li>
+              <li>
+                <strong>Location</strong>
+                <span>Trondheim, Norway</span>
+              </li>
+              <li>
+                <strong>Profiles</strong>
+                <a href="https://www.linkedin.com/in/jai-kishan-rajak-899a28217/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Jai-Rajak" target="_blank" rel="noopener">ResearchGate</a>
+              </li>
+            </ul>
+            </div>
+            <div class="content-card" style="padding: 0; overflow: hidden;">
+              <img src="pic3.jpg" alt="Formal portrait of Jai Kishan Rajak" style="width:100%; height:300px; object-fit:cover; object-position:center top;" onerror="this.style.display='none';" />
+            </div>
+          </div>
+
+          <div class="content-card">
+            <h3>Send a Message</h3>
+            <p>This contact form is styled for the website front end. To make it fully functional after deployment, connect it to Formspree, Netlify Forms, or your preferred backend.</p>
+            <form action="mailto:jai.k.rajak@ntnu.no" method="post" enctype="text/plain">
+              <div class="form-row">
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Your name" />
+                </label>
+                <label>
+                  Email
+                  <input type="email" name="email" placeholder="your@email.com" />
+                </label>
+              </div>
+              <label>
+                Subject
+                <input type="text" name="subject" placeholder="Research collaboration, position, speaking, etc." />
+              </label>
+              <label>
+                Message
+                <textarea name="message" placeholder="Write your message here..."></textarea>
+              </label>
+              <button class="button primary" type="submit">Send inquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Jai Kishan Rajak. All rights reserved.</p>
+      <p>Designed as a modern academic portfolio with a refined dark theme and research-driven visual language.</p>
+    </div>
+  </footer>
+</body>
+</html>
